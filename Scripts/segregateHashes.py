@@ -8,8 +8,8 @@ __maintainer__ = "Arun Thundyill Saseendran"
 __email__ = "thundyia@tcd.ie"
 
 
-filename = "../Hashes/Level1/Level1.hashes"
-newFilePrefix = "../Hashes/Level1/Split/level1"
+filename = "next.hashes"
+newFilePrefix = "../Hashes/Level2/Split/level2"
 
 formatDict = {"wierdhash":[],"descrypt":[]}
 with open(filename, "r") as inputFile:

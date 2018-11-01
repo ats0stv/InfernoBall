@@ -13,6 +13,7 @@ import argparse
 
 OUTPUT_FILE = './output.txt'
 LETTER_COUNT = 0
+MAX_LETTER_COUNT = 0
 MODE = -1
 MASTERFILE = './master.file'
 TOTAL_PROCESSED = 0
@@ -20,6 +21,7 @@ REGEX_LOWER = '^[a-z]+$'
 
 def processArgs():
     global LETTER_COUNT
+    global MAX_LETTER_COUNT
     global OUTPUT_FILE
     global MASTERFILE
     global MODE
@@ -27,14 +29,16 @@ def processArgs():
     parser.add_argument("--masterFile", "-mf", help="The path of the file containing all the files. Default: ./master.file", required=True)
     parser.add_argument("--outputFile", "-o", help="The path of the output file. If not specified file called (Should not be a hidden file) "
        +OUTPUT_FILE+ "in CWD will be created", required=False)
-    parser.add_argument("--numberOfChars", "-n", help="The number of letters. Eg. 4", required=True)
+    parser.add_argument("--minChars", "-min", help="Minimum number of letters. Eg. 4", required=True)
+    parser.add_argument("--maxChars", "-max", help="Maximum number of letters. Eg. 4", required=True)
     parser.add_argument("--convert", "-c", help="1 - Lower; 2 - Upper; 3 - As is, 4 - Select lower, 5 - select alnum", required=True)
     args = parser.parse_args()
     MASTERFILE = args.masterFile
     if args.outputFile:
         OUTPUT_FILE = args.outputFile
     try:
-        LETTER_COUNT = int(args.numberOfChars)
+        LETTER_COUNT = int(args.minChars)
+        MAX_LETTER_COUNT = int(args.maxChars)
     except Exception as e:
         print 'Unable to parse the number of characters'
         exit(1)
@@ -94,20 +98,23 @@ def isLetterInWord(line):
         return False
 
 
-def processFile(masterFile, outputFile, convertMode, letterCount):
+def processFile(masterFile, outputFile, convertMode, letterCount, maxLetterCount):
     global TOTAL_PROCESSED
     with open(masterFile,'r') as file:
         for line in file:
             # print 'Reading line {}'.format(line)
-            if len(line.strip()) == letterCount:
+            if len(line.strip()) >= letterCount and len(line.strip()) <= maxLetterCount:
                 if MODE == 4:
                     if re.match(REGEX_LOWER,line) and isLetterInWord(line):
                         TOTAL_PROCESSED = TOTAL_PROCESSED + 1
                         appendToFile(outputFile, convertBasedOnMode(line.strip(),convertMode))
                 elif MODE == 5:
-                    if unicode(line.strip()).isalnum():
-                        TOTAL_PROCESSED = TOTAL_PROCESSED + 1
-                        appendToFile(outputFile, convertBasedOnMode(line.strip(),convertMode))
+                    try:
+                        if unicode(line.strip()).isalnum():
+                            TOTAL_PROCESSED = TOTAL_PROCESSED + 1
+                            appendToFile(outputFile, convertBasedOnMode(line.strip(),convertMode))
+                    except Exception as e:
+                        print "Unparsable"
                 else:
                     appendToFile(outputFile, convertBasedOnMode(line.strip(),convertMode))
                     TOTAL_PROCESSED = TOTAL_PROCESSED + 1
@@ -117,8 +124,8 @@ def processFile(masterFile, outputFile, convertMode, letterCount):
 def main():
     processArgs()
     emptyTheFile(OUTPUT_FILE)
-    processFile(MASTERFILE, OUTPUT_FILE, MODE, LETTER_COUNT)
+    processFile(MASTERFILE, OUTPUT_FILE, MODE, LETTER_COUNT, MAX_LETTER_COUNT)
     print 'Processing Completed. \n{} words selected\n' \
-          'Output file with {} chars and mode {} can be found in path {}'.format(str(TOTAL_PROCESSED), str(LETTER_COUNT), str(MODE), OUTPUT_FILE)
+          'Output file with {}-{} chars and mode {} can be found in path {}'.format(str(TOTAL_PROCESSED), str(LETTER_COUNT), str(MAX_LETTER_COUNT), str(MODE), OUTPUT_FILE)
 
 main()
