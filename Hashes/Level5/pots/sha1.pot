@@ -20,6 +20,7 @@ $sha1$480000$pRiwkSP7$ucJmrxmMTc.hWzohtuPB7Nf37X4t:sungm
 $sha1$480000$C02ycr3D$4lcXKcUHriZIoy/nbVAgU4LPCml1:shaikhr
 $sha1$480000$OgMyljBU$/LDpz4TqD14BsbjVEV/3Hi0.IDSQ:leep2
 $sha1$480000$DHWyLpPx$dvnenpGux5VBECgo3tpRfMSSfK56:duffyc8
+<<<<<<< HEAD:Hashes/Level5/Pot/sha1.pot
 $sha1$480000$I.t/chI4$y3jTwcdnDOn7eq1YRoeoUm5eytgv:blackbuj
 $sha1$480000$2xl4SR3U$FWeTHKMqVBo88J8CoSULthGQydvm:rangwala
 $sha1$480000$rhe5FxIH$2gX2WxRoI2eJvutTKJhM59xeGU/3:mishraay
@@ -36,3 +37,7 @@ $sha1$480000$BeKqMlWE$RdosKrOXa9NrGej34Osu7sdXX9y.:bhathijk
 $sha1$480000$Ezps/0ZK$4N.MHkqTF7NTTExzSOBlgzkzUZ4N:farrej10
 $sha1$480000$KGwsigqE$4xwp8gte0IVTEeN41b9PxYWNLzvn:asmirnov
 $sha1$480000$uDAu3eby$YBib1hZkStQnBfs1.CRdC8sWSOfk:alcarasj
+=======
+
+
+>>>>>>> All Levels junk:Hashes/Level5/pots/sha1.pot
