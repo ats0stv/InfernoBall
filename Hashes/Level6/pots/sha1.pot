@@ -10,3 +10,5 @@ $sha1$480000$4bB9O3.T$hi60wcXoqSKM8/BYS/4jIgmr6.r.:283277
 $sha1$480000$MViN5x/X$MszD8l59uQJtW0kql2gDYZsuzkz0:295036
 $sha1$480000$aRYRRj4g$nT/IxFEY8S2Re31VxG80mW4sEhIN:auto10
 $sha1$480000$J7Kfsu8X$nwotlh1ncx9PwyccV8cSnnXNbbn.:132799
+$sha1$480000$glUwWAmh$ZADBS5qpmpclgivE0sO15Sj1owt/:teeker64
+$sha1$480000$sAdx0SXW$NWX0.LMnLkany6B/tMk1Ouxn82Cp:wilpen09
