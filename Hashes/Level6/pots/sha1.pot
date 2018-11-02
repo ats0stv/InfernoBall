@@ -40,3 +40,9 @@ $sha1$480000$zBI3fIXM$4HdLW.Sy7z9DSL8YiWhCEsWgS37g:tanirei
 $sha1$480000$lH8GKmzO$mKEr8.ZVTd4rwYuK5BEYPb.TR9Pm:tsm3333
 $sha1$480000$YkpJLiom$ef41TnzxuaCVMYJItmcJkZEoAgcL:koukla5
 $sha1$480000$/mlMfG4b$3IbKhuoJAdToA0EYgR7.i6SbOdsU:jtruo23
+$sha1$480000$s5KRCDGZ$6u/rYf3qq8iJdKV5wzSVC1IaQfLs:wertyuk
+$sha1$480000$AUxTqtdc$jKS9eCIKuwqprSOhpdwuWoaDhsYm:tupac0
+$sha1$480000$AXKjbNwr$bvA3PgBPG8WMi2SnoxcogLTHIoZl:roz2649
+$sha1$480000$7F1kIS9H$oj20h34zYSPo5Oyy0YY5TpWi6Ie4:mencena
+$sha1$480000$a3l3jTC4$tV.FI4l8O8yWSycPP8BKXAtA2VY1:sbjb1003
+$sha1$480000$KZ1Os1Y4$fusZANWOoXtFojumkpcFusaSLyVR:tiger452
