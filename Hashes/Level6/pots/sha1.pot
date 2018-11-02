@@ -14,3 +14,5 @@ $sha1$480000$glUwWAmh$ZADBS5qpmpclgivE0sO15Sj1owt/:teeker64
 $sha1$480000$sAdx0SXW$NWX0.LMnLkany6B/tMk1Ouxn82Cp:wilpen09
 $sha1$480000$xMCSNqe5$L4omz9.qxx83iRsStb/Xiq.Z9vY.:flake77
 $sha1$480000$duEcX24E$W5IwRVaARdupdUDNe8JILAmMlfsD:nbr2005
+$sha1$480000$rC3gPcQi$YM.lUE43C0qge3v.92YhFKZ825Yz:sammyemm
+$sha1$480000$QHrn1e.g$4hgRxl8tNHhsOOUTf5u1Is4YqNuO:ojen88
