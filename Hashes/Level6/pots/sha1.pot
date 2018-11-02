@@ -37,3 +37,6 @@ $sha1$480000$hqVYRjk4$dbZCLzOT9IIKeHCVlSnPHSyBuwL1:ruemmele
 $sha1$480000$m.WdhyRM$WgglM1NPyydQkoCXOk8P7B414nxm:sdavis25
 $sha1$480000$ofefk.ed$jf5v1D3Zr4Q3.Gqy5y2SPyx0gPvs:elexia1
 $sha1$480000$zBI3fIXM$4HdLW.Sy7z9DSL8YiWhCEsWgS37g:tanirei
+$sha1$480000$lH8GKmzO$mKEr8.ZVTd4rwYuK5BEYPb.TR9Pm:tsm3333
+$sha1$480000$YkpJLiom$ef41TnzxuaCVMYJItmcJkZEoAgcL:koukla5
+$sha1$480000$/mlMfG4b$3IbKhuoJAdToA0EYgR7.i6SbOdsU:jtruo23
