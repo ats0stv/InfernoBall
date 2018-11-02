@@ -9,7 +9,7 @@ __email__ = "thundyia@tcd.ie"
 
 
 filename = "next.hashes"
-newFilePrefix = "../Hashes/Level4/Split/level4"
+newFilePrefix = "../Hashes/Level6/Split/level6"
 
 formatDict = {"wierdhash":[],"descrypt":[]}
 with open(filename, "r") as inputFile:
