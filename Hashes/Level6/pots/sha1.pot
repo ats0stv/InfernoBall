@@ -34,3 +34,6 @@ $sha1$480000$bGIBsqtn$MYN6vbUy.ej8tbWLr1hneX8FVYvl:kaloog
 $sha1$480000$ejbHrq6q$72muVZR0GZ2qq/Ar9kF25Z5NfLQ4:9410164
 $sha1$480000$n7BOKtPw$CPxzJpksRpVrIzpJtbAzqDUzzPp7:15cars
 $sha1$480000$hqVYRjk4$dbZCLzOT9IIKeHCVlSnPHSyBuwL1:ruemmele
+$sha1$480000$m.WdhyRM$WgglM1NPyydQkoCXOk8P7B414nxm:sdavis25
+$sha1$480000$ofefk.ed$jf5v1D3Zr4Q3.Gqy5y2SPyx0gPvs:elexia1
+$sha1$480000$zBI3fIXM$4HdLW.Sy7z9DSL8YiWhCEsWgS37g:tanirei
