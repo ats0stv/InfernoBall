@@ -1,4 +1,25 @@
 #!/usr/bin/env python
+
+# Copyright (C) 2018, Arun Thundyill Saseendran | ats0stv@gmail.com, thundyia@tcd.ie
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
 """     Script to convert a set of pot files into a 
         submittable format with .hashes extension
         Scalable Computing
@@ -84,7 +105,6 @@ def processArgs():
 
 
 def segregatePasswordType(password):
-    # print 'Segreation start of {}'.format(password)
     global PASSWORD_TYPE_DICT
     global TOTAL_PASSWORD_COUNT
     global PASSWORD_STATS_DICT
@@ -121,7 +141,6 @@ def segregatePasswordType(password):
     except Exception as e:
         print e
         print 'Unable to parse the password {}'.format(password)
-    # print 'Segregation complete for {}'.format(password)
 
 def updatePasswordStats(passwordType,passwordLength):
     PASSWORD_STATS_DICT[passwordType]['count'] = PASSWORD_STATS_DICT[passwordType]['count'] + 1
@@ -134,7 +153,6 @@ def computerPasswordTypePercentage():
     global PASSWORD_STATS_DICT
     for key, value in PASSWORD_STATS_DICT.items():
         percent = float(PASSWORD_STATS_DICT[key]['count']) / TOTAL_PASSWORD_COUNT * 100;
-        # print 'tot = {}, key = {}, count = {}, percent = {}'.format(str(TOTAL_PASSWORD_COUNT),key,str(PASSWORD_STATS_DICT[key]['count']), str(percent))
         PASSWORD_STATS_DICT[key]['percent'] = percent
 
 def prepareOutputFromFile(inputFile,outputFile):
@@ -149,14 +167,9 @@ def prepareOutputFromFile(inputFile,outputFile):
                 splits = line.split(':')
                 splits[0] = '$pbkdf2-'+splits[0]
                 firstJoin = '$'.join(splits[:(len(splits)-1)])
-                # print 'Original - ' + line
                 line = firstJoin +':'+ splits[-1]
-                # print 'Reformatted - '+ line
-            # print 'Took the line {}'.format(line)
             if ':' in line:
                 splittedLine = line.split(':')
-                # print 'Splitted the line {}'.format(line)
-                # print 'Segregation {}'.format(line)
                 if not re.match('^\$.*',line): # To handle the submitty issue
                     splittedLine[1] = splittedLine[1][:7].strip()
                     formattedLine = ' '.join(splittedLine)+'\n'
@@ -165,7 +178,6 @@ def prepareOutputFromFile(inputFile,outputFile):
                 line = line.replace('\r\n','\n')
                 POT_LIST.append(line)
                 BROKEN_LIST.append(str(formattedLine).strip()+'\n')
-                # print 'Analyzing the line {}'.format(line)
             else:
                 print "The line '"+ line + "' in file "+ inputFile + " is not in pot format"
 
